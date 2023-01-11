@@ -1,10 +1,11 @@
-# Descritption
+# Project
 
 - A store for STEAM.
-- Link -> [Google] (https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Home.html "Google")
+- Store -> https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Home.html
 
-# TheOnlybEnter(Matt)
+# TEAM 
+### TheOnlybEnter
 
 - QA Engineer
-
+- Portfolio - https://www.codermerlin.com/users/matthew-roman/Digital%20Portfolio/index.html
 
