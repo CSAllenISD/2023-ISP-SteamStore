@@ -1,7 +1,6 @@
 # Project
 
 - A store for STEAM.
-- Store -> https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Home.html
 
 # TEAM 
 ### TheOnlybEnter
