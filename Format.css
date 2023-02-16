@@ -1,0 +1,52 @@
+html, body {
+    margin: 0px;
+    min-width: 100%;	
+}
+
+/* general properties */
+* {
+    box-sizing: border-box;
+}
+.header {
+    border: red 1px solid; /* rmv later*/
+}
+/* desktop */
+@media only screen and (min-width: 750px) {
+    .header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 1rem;	
+    }
+    #links {
+	display: inline;
+    }
+    #links a {
+	padding: 1rem;
+    }
+    #icon {	
+	display: none;
+    }
+}
+/* mobile */
+@media only screen and (max-width: 750px) {
+
+    .header {
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+    }
+    #links {
+	display: none;
+    }
+    #links a{
+	display: block;
+	padding: 0.5rem;
+    }
+    #icon {
+	float: right;
+	padding: 0.5rem;
+	display: block;
+    }
+}
