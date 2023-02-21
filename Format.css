@@ -1,25 +1,35 @@
+@font-face {
+    font-family: logoFont;
+    src:url(https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Fonts/trust.ttf);
+}
 html, body {
     margin: 0px;
     min-width: 100%;	
 }
 
-/* general properties */
+/* ~~General Properties~~ */
 * {
     box-sizing: border-box;
 }
 .header {
+    width: 100%;
     border: red 1px solid; /* rmv later*/
 }
-/* desktop */
+/*logo properties*/
+span[id*="logo"] {
+    color: red;
+    font-size: 2em;
+    font-family: logoFont;
+}
+/* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
-    .header {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	padding: 1rem;	
+    .navigation {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
     }
     #links {
+	/* width and height dont apply if inline, it will be deterimed by the size of the content of the element.*/
 	display: inline;
     }
     #links a {
@@ -28,14 +38,19 @@ html, body {
     #icon {	
 	display: none;
     }
+    /* div for mobile icon/logo not visible on desktop */
+    .logo-icon-mobile {
+	display: none;
+    }
 }
-/* mobile */
+/* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
-
     .header {
-	width: 100%;
 	bottom: 0;
 	position: fixed;
+    }
+    .navigation {
+	bottom: 0;
     }
     #links {
 	display: none;
@@ -49,4 +64,9 @@ html, body {
 	padding: 0.5rem;
 	display: block;
     }
+    /* span text thats logo for desktop removed */
+    #logo-desktop {
+	display: none;
+    }
+
 }
