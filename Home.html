@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
   <head>
+    <title> STEAM Store </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="STEAM Store">
     <link rel="stylesheet" href="Format.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    
     <script src="https://kit.fontawesome.com/d71334a9f5.js" crossorigin=""></script>
-    <script src="https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Main.js"></script>
-    
+    <script src="Main.js"></script>   
   </head>
   <body>
-    <title> STEAM Store </title>
 
+    
     <div class="header">
-      <div id="links">
-	<a href="#H"> HOME </a> 
-	<a href="#D"> DEAL </a> 
-      </div>
-      <!-- fix this image later and position it correctly -->
 
-      <a id="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+      <div class="top-navigation-desktop shared-navigation">
+	<img id="logo-test" src="Images/STEAMStore_Logo.png" alt="logo">
+	<a id="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i> </a>
+      </div>
+      
+      <div class="bottom-navigation" "mobile-menu-links">
+	<div id="links">
+	  <a href="#D"> DEAL </a>
+	  <a href="#H"> HOME </a>
+	</div>
+	
+	<div class="logo-icon-mobile shared-navigation" >
+	  <img id="logo-test" src="Images/STEAMStore_Logo.png" alt="logo">
+	  <a id="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+	  <a id="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i> </a>
+	</div>
+
+      </div>
     </div>
+
   </body>
 </html>

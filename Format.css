@@ -1,26 +1,61 @@
+@font-face {
+    font-family: logoFont;
+    src:url(https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Fonts/trust.ttf);
+}
 html, body {
     margin: 0px;
-    min-width: 100%;	
 }
 
-/* general properties */
+/* ~~Shared Properties~~ */
 * {
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-.header {
-    border: red 1px solid; /* rmv later*/
+/* ~header ~ */
+.header, .bottom-navigation {    
+    width: 100%;
 }
-/* desktop */
+/* ~ links ~ */
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* ~ logo ~ */
+#logo-test {
+    max-height: 100%;
+}
+.shared-navigation {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+}
+
+/* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
-    .header {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	padding: 1rem;	
+    .bottom-navigation {
+	display: flex;
+	align-items: center;
+    }
+    /* ~ top nav ~ */
+    .top-navigation-desktop {
+	height: 5vh;
+    }
+    #account-icon{
+	padding: 0.2em;
+	font-size: 1.5em;
+	margin-left: auto;
+    }
+    /* ~ bottom nav ~ */
+    .bottom-navigation {
+	border-bottom-style: solid; 
+	border-top-style: solid; 
     }
     #links {
-	display: inline;
+	/* width and height dont apply if inline, it will be deterimed by the size of the content of the element.*/
+	margin: auto;
     }
     #links a {
 	padding: 1rem;
@@ -28,15 +63,27 @@ html, body {
     #icon {	
 	display: none;
     }
+    /* removed elements for mobile */
+    .logo-icon-mobile {
+	display: none;
+    }
 }
-/* mobile */
-@media only screen and (max-width: 750px) {
 
+/* ~~MOBILE~~ */
+@media only screen and (max-width: 750px) {
     .header {
-	width: 100%;
 	bottom: 0;
 	position: fixed;
     }
+    /* mobile menu */
+    .mobile-menu-links {
+	bottom: 0;
+    }    
+    .logo-icon-mobile {
+	border-top-style: solid;
+	display:flex;
+	align-items: center;
+    } 
     #links {
 	display: none;
     }
@@ -45,8 +92,19 @@ html, body {
 	padding: 0.5rem;
     }
     #icon {
-	float: right;
+	color: black;
 	padding: 0.5rem;
-	display: block;
     }
+    #account-icon {
+	margin-left: auto;
+	padding: 0.5rem;
+    }
+    /* removed elements for desktop */
+    .top-navigation-desktop {	
+	display: none;
+    }
+    #logo-desktop {
+	display: none;
+    }
+    
 }
