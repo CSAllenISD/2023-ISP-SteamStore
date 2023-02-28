@@ -2,18 +2,30 @@
     font-family: logoFont;
     src:url(https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Fonts/trust.ttf);
 }
-html, body {
-    margin: 0px;
-}
 
+html, body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
 /* ~~Shared Properties~~ */
+
 * {
+    border-width: 0.2em;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 /* ~header ~ */
+.header {
+     position: fixed;
+}
 .header, .bottom-navigation {    
     width: 100%;
+}
+.shared-navigation {
+    display: flex;
+    align-items: center;
+    height: 5vh;
 }
 /* ~ links ~ */
 a, a:link, a:visited {
@@ -27,14 +39,24 @@ a:hover {
 #logo-test {
     max-height: 100%;
 }
-.shared-navigation {
-    display: flex;
-    align-items: center;
+
+/*~ body ~*/
+.body {
+    margin-top: auto;
+}
+/*~ Footer ~*/
+.copyright {
+
+    text-align: center;
     height: 5vh;
 }
 
+
 /* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
+    .header {
+	top: 0;
+    }
     .bottom-navigation {
 	display: flex;
 	align-items: center;
@@ -66,14 +88,13 @@ a:hover {
     /* removed elements for mobile */
     .logo-icon-mobile {
 	display: none;
-    }
+    }    
 }
 
 /* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
     .header {
 	bottom: 0;
-	position: fixed;
     }
     /* mobile menu */
     .mobile-menu-links {
