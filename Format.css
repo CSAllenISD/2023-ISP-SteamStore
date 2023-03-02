@@ -17,7 +17,7 @@ html, body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
 
 }
 /* ~header ~ */
@@ -49,10 +49,6 @@ a:hover {
     grid-column-start: 1;
     grid-column-end: 2;
 }
-.body {
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
 
 /*~ Footer ~*/
 .footer {
@@ -64,7 +60,7 @@ a:hover {
 
 /* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
-    /* ~ top nav ~ */
+    /* ~ navigation ~ */
     #top-navigation-desktop {
 	height: 5vh;
     }
@@ -85,7 +81,10 @@ a:hover {
     #icon {	
 	display: none;
     }
-    /* removed elements for mobile */
+    .body {
+	grid-column: 2/3;
+    }
+    /* removed elements for desktop view */
     #mobile-navigation {
 	display: none;
     }
@@ -97,10 +96,13 @@ a:hover {
 /* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
     .header {
-	position: sticky;	
-	bottom: 0;
+	grid-column: 1/3
     }
-    /* mobile menu */
+    .body {
+	grid-column: 1/3;
+	height: 100vh;
+    }
+    /* mobile menu */    
     #mobile-navigation {
 	border-top-style: solid;
 	display:flex;
@@ -121,14 +123,15 @@ a:hover {
 	margin-left: auto;
 	padding: 0.5rem;
     }
-    /* removed elements for desktop */
+
+    /* removed elements in mobile view */
+    .side-bar{
+	display: none;
+    }
     #top-navigation-desktop {	
 	display: none;
     }
     #logo-desktop {
 	display: none;
-    }
-    .body {
-	padding-bottom: 5vh;
     }
 }
