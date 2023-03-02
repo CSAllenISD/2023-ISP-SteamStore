@@ -5,22 +5,25 @@
 
 html, body {
     margin: 0;
-    height: 100%;
-    position: relative;
 }
 /* ~~Shared Properties~~ */
 
+
 * {
-    border-width: 0.2em;
+    border-width: .1em;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+}
 /* ~header ~ */
 .header {
-     position: fixed;
-}
-.header, .bottom-navigation {    
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 .shared-navigation {
     display: flex;
@@ -36,48 +39,45 @@ a:hover {
     text-decoration: underline;
 }
 /* ~ logo ~ */
-#logo-test {
+.official-logo {
     max-height: 100%;
 }
 
 /*~ body ~*/
-.body {
-    margin-top: auto;
+.side-bar {
+    width: 50%;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
-/*~ Footer ~*/
-.copyright {
+.body {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 
+/*~ Footer ~*/
+.footer {
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;    
     height: 5vh;
 }
 
-
 /* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
-    .header {
-	top: 0;
-    }
-    .bottom-navigation {
-	display: flex;
-	align-items: center;
-    }
     /* ~ top nav ~ */
-    .top-navigation-desktop {
+    #top-navigation-desktop {
 	height: 5vh;
     }
     #account-icon{
 	padding: 0.2em;
 	font-size: 1.5em;
 	margin-left: auto;
-    }
-    /* ~ bottom nav ~ */
-    .bottom-navigation {
-	border-bottom-style: solid; 
-	border-top-style: solid; 
-    }
+    }    
     #links {
 	/* width and height dont apply if inline, it will be deterimed by the size of the content of the element.*/
-	margin: auto;
+	border-bottom-style: solid; 
+	border-top-style: solid; 	
+	text-align: center;
     }
     #links a {
 	padding: 1rem;
@@ -86,21 +86,22 @@ a:hover {
 	display: none;
     }
     /* removed elements for mobile */
-    .logo-icon-mobile {
+    #mobile-navigation {
 	display: none;
-    }    
+    }
+    .body {
+	padding-top: 5vh;
+    }
 }
 
 /* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
     .header {
+	position: sticky;	
 	bottom: 0;
     }
     /* mobile menu */
-    .mobile-menu-links {
-	bottom: 0;
-    }    
-    .logo-icon-mobile {
+    #mobile-navigation {
 	border-top-style: solid;
 	display:flex;
 	align-items: center;
@@ -121,11 +122,13 @@ a:hover {
 	padding: 0.5rem;
     }
     /* removed elements for desktop */
-    .top-navigation-desktop {	
+    #top-navigation-desktop {	
 	display: none;
     }
     #logo-desktop {
 	display: none;
     }
-    
+    .body {
+	padding-bottom: 5vh;
+    }
 }
