@@ -1,18 +1,14 @@
-@font-face {
-    font-family: logoFont;
-    src:url(https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Fonts/trust.ttf);
-}
 
 body {
     margin: 0;
     padding: 0;
+
 }
 
 /* ~~Shared Properties~~ */
 
 
 * {
-    border-width: .1em;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
@@ -60,7 +56,6 @@ a:hover {
     height: 5vh;
 }
 .body {
-    height: 100vh;
 }
     
 
