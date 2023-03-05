@@ -1,8 +1,4 @@
-body {
-}
-
 /* ~~Shared Properties~~ */
-
 *{
     padding: 0;
     margin: 0;
@@ -10,25 +6,6 @@ body {
     box-sizing: border-box;
 }
 
-/* ~layout~ */
-.grid-container {
-    height: 100vh;
-    display: grid;       
-    grid-template-columns: 20% 80%;
-    grid-auto-rows: auto; 
-}
-/* ~header~ */
-header {
-    position: sticky;
-    top: 0;        
-    background-color: white;
-    grid-column: 1/3;
-}
-.shared-navigation {
-    height: 5vh;
-    display: flex;
-    align-items: center;
-}
 /* ~links~ */
 li {
     list-style: none;
@@ -40,26 +17,53 @@ a, a:link, a:visited {
 a:hover {
     text-decoration: underline;
 }
+
 /* ~logo~ */
 .official-logo {
     height: 5vh;    
 }
 
+/* ~layout~ */
+.grid-container {
+    height: 100dvh;
+    height: 100vh;
+    display: grid;       
+    grid-template-columns: 20% 80%;
+    grid-auto-rows: auto 1fr auto;
+}
+header, main, footer {
+    grid-column: 1/3;
+}
+/* ~header~ */
+header {
+    position: sticky;
+    top: 0;        
+    background-color: white;    
+}
+.shared-navigation {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
 /* ~body~ */
 
 /*~ Footer ~*/
-
 footer {
-    justify-content: space-between;
     display: flex;
-    grid-column: 1/3;    
+    flex-wrap: wrap; 
+    justify-content: space-between;
     border-top-style: solid; 	     
 }
-
-.copyright {    
-    grid-column: 1/3;    
+.useful-links, .socials {
+    flex-basis: 50%;
+}
+.useful-links {
+    text-align: right;
+}
+.copyright {
+    align-self: flex-end;
+    flex-grow: 1;
     text-align: center;
-    width: 100%;
     word-wrap: break-word;   
 }
 
@@ -69,7 +73,7 @@ footer {
 @media only screen and (min-width: 750px) {
 
     /* ~navigation~ */
-    #top-navigation-desktop {
+    #desktop-navigation {
 	height: 2rem;
     }
     .account-icon{
@@ -106,11 +110,7 @@ footer {
 /* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
     /* ~mobile menu~ */
-    *{
-	font-size: 100%;
-    }
     #mobile-navigation {	
-
 	display:flex;
 	align-items: center;
     } 
@@ -133,11 +133,15 @@ footer {
     .body {
 	grid-column: 1/3;
     }
+    /* ~mobile footer~ */
+    .copyright {	
+	transform: scale(0.8);
+    }
     /* ~removed elements in mobile view~ */
     .side-bar{
 	display: none;
     }
-    #top-navigation-desktop {	
+    #desktop-navigation {	
 	display: none;
     }
     #logo-desktop {
