@@ -138,9 +138,7 @@ footer {
 	transform: scale(0.8);
     }
     /* ~removed elements in mobile view~ */
-    .side-bar{
-	display: none;
-    }
+
     #desktop-navigation {	
 	display: none;
     }
