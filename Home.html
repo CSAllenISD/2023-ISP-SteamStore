@@ -9,33 +9,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    
-    <script src="https://kit.fontawesome.com/d71334a9f5.js" crossorigin=""></script>
-    <script src="Main.js"></script>   
+    <script src="https://kit.fontawesome.com/d71334a9f5.js" crossorigin="anonymous"></script>
+    <script src="Main.js"></script>
+    
   </head>
   <body>
 
-    
-    <div class="header">
 
-      <div class="top-navigation-desktop shared-navigation">
-	<img id="logo-test" src="Images/STEAMStore_Logo.png" alt="logo">
-	<a id="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i> </a>
-      </div>
-      
-      <div class="bottom-navigation" "mobile-menu-links">
-	<div id="links">
-	  <a href="#D"> DEAL </a>
-	  <a href="#H"> HOME </a>
+
+    <div class="grid-container">     
+      <header>
+	<div class="shared-navigation" id="desktop-navigation">
+	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">
+	  <a class="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i> </a>
 	</div>
 	
-	<div class="logo-icon-mobile shared-navigation" >
-	  <img id="logo-test" src="Images/STEAMStore_Logo.png" alt="logo">
-	  <a id="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-	  <a id="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i> </a>
+	<ul id="links">	  
+	  <li><a href="#D"> DEAL </a></li>
+	  <li><a href="#H"> HOME </a></li>
+	</ul>
+	
+	<div class="shared-navigation" id="mobile-navigation">
+	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">
+	  <a id="icon" href="javascript:void(0);" onclick="displayLinks()"><i class="fa fa-bars"></i></a>
+	  <a class="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i></a>
+	</div>
+      </header>
+
+      <main>
+	
+      </main>
+      
+      <footer>
+
+	<div class="socials">
+	  <h3> Socials </h3>
+	  <ul>
+	  <li><a href="#D"> Instagram </a></li>
+	  <li><a href="#D"> Twitter </a></li>
+	  </ul>
+	</div>
+	
+	<div class="useful-links">
+	  <h3> Customer Care </h3>
+	  <ul>
+	    <li><a href="#D"> FAQ </a></li>
+	    <li><a href="#D"> Contact Us</a></li>
+	  </ul>
 	</div>
 
-      </div>
-    </div>
-
+	<div class="copyright">	
+	  <p> This a project for school </p>
+	  <p><b> Copyright &#169; Matthew Roman. </b></p>
+	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">
+	</div>
+	      
+	
+      </footer>
+      
+      
+    </div >
+    
   </body>
 </html>
+

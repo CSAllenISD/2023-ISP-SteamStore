@@ -1,21 +1,15 @@
-@font-face {
-    font-family: logoFont;
-    src:url(https://www.codermerlin.com/users/matthew-roman/STEAM%20Store/Fonts/trust.ttf);
-}
-html, body {
-    margin: 0px;
-}
-
 /* ~~Shared Properties~~ */
-* {
+*{
+    padding: 0;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-/* ~header ~ */
-.header, .bottom-navigation {    
-    width: 100%;
+
+/* ~links~ */
+li {
+    list-style: none;
 }
-/* ~ links ~ */
 a, a:link, a:visited {
     text-decoration: none;
     color: black;
@@ -23,71 +17,107 @@ a, a:link, a:visited {
 a:hover {
     text-decoration: underline;
 }
-/* ~ logo ~ */
-#logo-test {
-    max-height: 100%;
+
+/* ~logo~ */
+.official-logo {
+    height: 5vh;    
+}
+
+/* ~layout~ */
+.grid-container {
+    height: 100dvh;
+    height: 100vh;
+    display: grid;       
+    grid-template-columns: 20% 80%;
+    grid-auto-rows: auto 1fr auto;
+}
+header, main, footer {
+    grid-column: 1/3;
+}
+/* ~header~ */
+header {
+    position: sticky;
+    top: 0;        
+    background-color: white;    
 }
 .shared-navigation {
+    height: 5vh;
     display: flex;
     align-items: center;
-    height: 5vh;
 }
+/* ~body~ */
+
+/*~ Footer ~*/
+footer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    border-top-style: solid; 	     
+}
+.useful-links, .socials {
+    flex-basis: 50%;
+}
+.useful-links {
+    text-align: right;
+}
+.copyright {
+    align-self: flex-end;
+    flex-grow: 1;
+    text-align: center;
+    word-wrap: break-word;   
+}
+
+
 
 /* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
-    .bottom-navigation {
-	display: flex;
-	align-items: center;
+
+    /* ~navigation~ */
+    #desktop-navigation {
+	height: 2rem;
     }
-    /* ~ top nav ~ */
-    .top-navigation-desktop {
-	height: 5vh;
-    }
-    #account-icon{
-	padding: 0.2em;
-	font-size: 1.5em;
+    .account-icon{
 	margin-left: auto;
-    }
-    /* ~ bottom nav ~ */
-    .bottom-navigation {
-	border-bottom-style: solid; 
-	border-top-style: solid; 
-    }
+	font-size: 1.5em;
+    }    
     #links {
+	background-color: white;
+	text-align: center;
 	/* width and height dont apply if inline, it will be deterimed by the size of the content of the element.*/
-	margin: auto;
+	border-bottom-style: solid; 
+	border-top-style: solid; 	
     }
-    #links a {
-	padding: 1rem;
+    #links li {
+	display: inline;	
+    }
+    #links li a {
+	padding: 0 1em;
+    }
+    /* ~body~ */
+    .body {
+	grid-column: 2/3;
+    }
+    /* ~removed elements for desktop view~ */
+    #mobile-navigation {
+	display: none;
     }
     #icon {	
 	display: none;
     }
-    /* removed elements for mobile */
-    .logo-icon-mobile {
-	display: none;
-    }
+    
 }
 
 /* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
-    .header {
-	bottom: 0;
-	position: fixed;
-    }
-    /* mobile menu */
-    .mobile-menu-links {
-	bottom: 0;
-    }    
-    .logo-icon-mobile {
-	border-top-style: solid;
+    /* ~mobile menu~ */
+    #mobile-navigation {	
 	display:flex;
 	align-items: center;
     } 
     #links {
 	display: none;
     }
-    #links a{
+    #links a{	
 	display: block;
 	padding: 0.5rem;
     }
@@ -95,16 +125,24 @@ a:hover {
 	color: black;
 	padding: 0.5rem;
     }
-    #account-icon {
+    .account-icon {
 	margin-left: auto;
-	padding: 0.5rem;
+	padding: 0 0.5rem;
     }
-    /* removed elements for desktop */
-    .top-navigation-desktop {	
+    /* ~mobile body~ */
+    .body {
+	grid-column: 1/3;
+    }
+    /* ~mobile footer~ */
+    .copyright {	
+	transform: scale(0.8);
+    }
+    /* ~removed elements in mobile view~ */
+
+    #desktop-navigation {	
 	display: none;
     }
     #logo-desktop {
 	display: none;
     }
-    
 }
