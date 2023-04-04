@@ -6,61 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="STEAM Store">
     <link rel="stylesheet" href="Format.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    
     <script src="https://kit.fontawesome.com/d71334a9f5.js" crossorigin="anonymous"></script>
     <script src="Main.js"></script>
     
   </head>
   <body>
 
-
-
     <div class="grid-container">     
       <header>
+	
 	<div class="shared-navigation" id="desktop-navigation">
-	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">
-	  <a class="account-icon" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i> </a>
-	</div>
-	
+	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">	   
+	  <button class="bars-btn" onclick="displayLinks('header-links', '100%')"><i class="fa fa-bars"></i></button>	  
+	  <a class="account-icon" > <i class="fa-solid fa-circle-user"></i> </a>
+	</div>	
+
+
 	<ul id="header-links">	  
-	  <li><a href="#D"> DEAL </a></li>
-	  <li><a href="#H"> HOME </a></li>
+	  <li><a href="#D"> HOME </a></li>
+	  <li><a href="#H"> DEAL </a></li>
 	</ul>
-	
-	<div class="shared-navigation" id="mobile-navigation">
-	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">
-	  <a class="bars-icon icons" href="javascript:void(0);" onclick="displayLinks()"><i class="fa fa-bars"></i></a>
-	  <a class="account-icon icons" href="javascript:void(0);"> <i class="fa-solid fa-circle-user"></i></a>
-	</div>
+
       </header>
 
-      <main>
-	
+      <main>	
+
       </main>
       
       <footer>
 
-	<div class="top-footer-content-container">
-	  <div class="socials">
-	    <h4> Socials<a class="plus-icon"><i class="fa-solid fa-plus"></i></a> </h4>
-	    <ul class="footer-links">
-	      <li><a href="#D"> Instagram </a></li>
-	      <li><a href="#D"> Twitter </a></li>
-	    </ul>
-	  </div>
+	<div class="top-footer-content-container" >
 	  
-	  <div class="useful-links">
-	    <h4> Customer Care <a class="plus-icon"><i class="fa-solid fa-plus"></i></a> </h4>
-
-	    <ul class="footer-links">
-
-	      <li><a href="#D"> FAQ </a></li>
-	      <li><a href="#D"> Contact Us</a></li>
-	    </ul>
-	  </div>
+	  <div class="h4-icon-container" onclick="displayLinks('footer-links-1', '0%')"> <h4> name <i class="fa fa-plus"> </i> </h4> </div>	  
+	  <ul id="footer-links-1">
+	    <li><a href="#D"> link-1 </a></li>
+	    <li><a href="#D"> link-2 </a></li>	      
+	  </ul>
 	</div>
+	
 	
 	<div class="copyright">	
 	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">
@@ -68,12 +51,11 @@
 	  <p><b> Copyright &#169; Matthew Roman. </b></p>
 	</div>
 	
-	
       </footer>
       
       
     </div >
-    
+
   </body>
 </html>
 

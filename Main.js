@@ -1,8 +1,10 @@
-function displayLinks() {
-    var x = document.getElementById("header-links");    
-    if (x.style.display === "block") {
-	x.style.display = "none";
+function displayLinks(links, width) {
+    var x = document.getElementById(links);
+    if (x.style.display === 'none') {
+	x.style.display = 'block';
+	x.style.width = width;	
     } else {
-	x.style.display = "block";
+	x.style.display = 'none';	
     }
 }
+
