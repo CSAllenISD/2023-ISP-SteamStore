@@ -17,7 +17,7 @@
 	
 	<div class="shared-navigation" id="desktop-navigation">
 	  <img class="official-logo" src="Images/brand_logo.png" alt="logo">	   
-	  <button class="bars-btn" onclick="displayLinks('myNav', '100%')"><i class="fa fa-bars"></i></button>	  
+	  <button class="bars-btn" onclick="animateNav('.bars-btn','.overlay', 'width')"><i class="fa fa-bars"></i></button>	  
 	  <a class="account-icon" > <i class="fa-solid fa-circle-user"></i> </a>
 	</div>	
 
@@ -37,13 +37,16 @@
       <footer>
 
 	<div class="top-footer-content-container" >
+
 	  
-	  <div class="h4-icon-container" onclick="displayLinks('footer-links-1', '0%')"> <h4> name <i class="fa fa-plus"> </i> </h4> </div>	  
-	  <ul id="footer-links-1">
-	    <li><a href="#D"> link-1 </a></li>
-	    <li><a href="#D"> link-2 </a></li>	      
+	  <div class="h4-icon-container"> <h4> Name <i class="fa fa-plus"> </i> </h4> </div>	  
+	  <ul class="footer-links-1">
+	    <li><a href="#D"> link </a></li>
+	    <li><a href="#D"> link </a></li>	      
 	  </ul>
 	</div>
+
+
 	
 	
 	<div class="copyright">	

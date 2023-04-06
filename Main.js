@@ -1,10 +1,15 @@
-function displayLinks(links, width) {
-    var x = document.getElementById(links);
-    if (x.style.display === 'none') {
-	x.style.display = 'block';
-	x.style.width = width;	
+function animateNav(eventTracker, changedElement, property) {
+    var openButton = document.querySelector(eventTracker);
+    var overlay = document.querySelector(changedElement);
+    
+    openButton.addEventListener('click', changeNavPropSize(overlay, property));
+}
+function changeNavPropSize(element ,property) {    
+    if (element.style[property] == "0%") {
+	element.style[property] = '100%';
     } else {
-	x.style.display = 'none';	
+	element.style[property] = '0%';
     }
 }
+
 
