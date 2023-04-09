@@ -8,7 +8,6 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     border-width: thin;
-    font-weight: 50%;
 }
 
 /* ~GENERAL TAGS~ */
@@ -49,7 +48,7 @@ header, main, footer {
 
 /* ~Header~ */
 header {
-    height: auto
+    height: auto;
     position: sticky;
     top: 0;        
     background-color: white;    
@@ -76,11 +75,13 @@ footer {
 /* ~~DESKTOP~~ */
 @media only screen and (min-width: 750px) {
     /* ~all~ */
-    
-    /* ~header~ */    
+    * {
+    }
+        /* ~header~ */    
     .account-icon{
+	font-size: 175%;
 	margin-left: auto;
-
+	padding: 0 0.5em;
     }    
     .header-links {
 	background-color: white;
@@ -108,16 +109,10 @@ footer {
 /* ~~MOBILE~~ */
 @media only screen and (max-width: 750px) {
     /* ~all~ */
-    * {
-	font-size: 105%;
-    }
     a {
-	display: block;
+	display: block;	
     }
     /* ~header~ */
-    header i {
-
-    }
     .shared-navigation {	
 	display:flex;
 	align-items: center;
@@ -135,26 +130,37 @@ footer {
 	width: 0%;
     }
     .overlay a {
-
+	font-size: 1.5em;
 	display: block;
 	padding: 0.5em 0;
 	transition: 0.3s;
     }
-    .bars-btn {
-
+    .bars-btn {	
 	margin-left: auto;
-	padding: 0 0.5em;
+	padding: 0 1em;
+    }
+    .bars-btn i{
+	font-size: 2em;
     }
     /* ~body~ */    
     
     /* ~footer~ */
-    
     .h4-icon-container, [class^="footer-links"] {
-	padding: 0 3%;
+	font-size: 1.3em;
+	
     }
     .h4-icon-container i{
 	float: right;
     }
+    [class^="footer-links"]{
+
+    }    
+    [class^="footer-links"] a{
+	font-size: 0.8em;
+	
+    }
+    
+
     /* ~removed elements in mobile view~ */
     .account-icon {
 	display: none;
