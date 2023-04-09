@@ -18,5 +18,10 @@ function toggleIcon(containerDiv, className, oldIcon, newIcon, linksClass) {
     icon.classList.toggle(oldIcon);    
     icon.classList.toggle(newIcon);
     links.style.display = (links.style.display === "none") ? "block" : "none";
+    if (icon.classList.contains(newIcon)) {
+	icon.style.transform = "rotate(360deg)";
+    } else {
+	icon.style.transform = "rotate(90deg)";
+    }
 }
 

@@ -151,6 +151,7 @@ footer {
     }
     .h4-icon-container i{
 	float: right;
+	transition: transform 0.3s ease-in-out;
     }
     [class^="footer-links"]{
 
