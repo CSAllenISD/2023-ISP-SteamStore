@@ -1,8 +1,9 @@
 /* ~~Shared Properties~~ */
 html, body {
+
     height: 100%;
 }
-*{    
+*{
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -27,14 +28,11 @@ a:hover {
 }
 
 /* ~Logo~ */
-.official-logo {
-    max-height: 5vh;
-}
 
 /* ~~LAYOUT~~ */
 
 .grid-container {
-    height: 100vh;
+    height: 100%;
     display: grid;       
     grid-template-columns: 20% 80%;
     grid-auto-rows: auto 1fr auto;
@@ -50,25 +48,27 @@ header, main, footer {
 header {
     height: auto;
     position: sticky;
-    top: 0;        
-    background-color: white;    
+    top: 0;
+    background-color: white;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.2);
 }
 .shared-navigation {
     display: flex;
     align-items: center;
 }
 /* ~Body~ */
-
+.page-welcome {
+    
+}
 /*~ Footer ~*/
 footer {
     background-color: ghostwhite;
 }
 .top-footer-content-container {
-    padding: 0.5em 0;
+    padding: 0.6em 0.4em;
 }
 .copyright {            
     border-top-style: solid;
-    padding: 1em 0 0 0;
     text-align: center;
 }
 
@@ -77,31 +77,51 @@ footer {
     /* ~all~ */
     * {
     }
-        /* ~header~ */    
-    .account-icon{
-	font-size: 175%;
+    /* ~header~ */
+    .official-logo {
+	max-height: 8vh;
+    }    
+    .account-icon-desktop {
+	text-align: center;
 	margin-left: auto;
 	padding: 0 0.5em;
-    }    
+    }
+    .account-icon-desktop i {
+	font-size: 200%;
+    }
     .header-links {
 	background-color: white;
 	text-align: center;
 	/* width and height dont apply if inline, it will be deterimed by the size of the content of the element.*/
-	border-bottom-style: solid; 
-	border-top-style: solid; 	
+	border-bottom-style: solid ; 
+	border-top-style: solid;
+
     }
     .header-links li {
 	display: inline;
     }
     .header-links li a {
 	padding: 0 1em;
+	font-size: 1em;
     }
     /* ~body~ */
     
     /* ~footer~ */
-    
+    .footer-link-container {
+	padding: 0 1.5em;
+    }
+    .top-footer-content-container {
+	display: flex;
+    }
+    .p-icon-container p{
+	font-size: 1.5em;
+    }
+    /* ~removed click functionality for certain elements~ */
+    .p-icon-container {
+	pointer-events: none;
+    }
     /* ~removed elements for desktop view~ */
-    .bars-btn, .h4-icon-container i {
+    .bars-btn, .p-icon-container i, .account-icon-mobile {
 	display: none;
     }
 }
@@ -113,13 +133,17 @@ footer {
 	display: block;	
     }
     /* ~header~ */
+    .official-logo {
+	max-height: 5vh;
+    }
     .shared-navigation {	
 	display:flex;
 	align-items: center;
 	border-bottom-style: solid;	
     }
-
     .overlay {
+	display: flex;
+	flex-flow: column;
 	height: 100%;
 	position: fixed;
 	z-index: 1;
@@ -135,35 +159,42 @@ footer {
 	padding: 0.5em 0;
 	transition: 0.3s;
     }
-    .bars-btn {	
+    .bars-btn {
 	margin-left: auto;
-	padding: 0 1em;
+	padding: 0.5em 1em;
+	text-align: center;
     }
-    .bars-btn i{
+    .bars-btn i {
 	font-size: 2em;
+	transition: transform 0.3s ease-in-out;
+    }
+    .account-icon-mobile p{
+	font-size: 0.8em;
     }
     /* ~body~ */    
     
     /* ~footer~ */
-    .h4-icon-container, [class^="footer-links"] {
-	font-size: 1.3em;
-	
+    .footer-link-container {
+	margin: 1.3em 1.2em;
+	border-bottom-style: solid;
+	border-color: grey;
+    }    
+    .p-icon-container p {
+	font-size: 1.5em;
     }
-    .h4-icon-container i{
+    .p-icon-container i{
+	font-size: 75%;
 	float: right;
 	transition: transform 0.3s ease-in-out;
     }
     [class^="footer-links"]{
-
+	display: none;
     }    
     [class^="footer-links"] a{
-	font-size: 0.8em;
-	
+	font-size: 1em;	
     }
-    
-
     /* ~removed elements in mobile view~ */
-    .account-icon {
+    .account-icon-desktop {
 	display: none;
     }
     
