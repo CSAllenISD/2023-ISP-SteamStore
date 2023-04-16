@@ -22,5 +22,3 @@ function displayLinks(linksClass) {
     links.style.display = (links.style.display != "block") ? "block" : "none";
 }
 
-
-
