@@ -13,51 +13,63 @@
   <body>
 
     <div class="grid-container">     
-      <header>
-	
-	<div class="header-container">
-	  <img class="brand-logo" src="Images/brand_logo.png" alt="logo">
-	  <div class="header-container__bars" onclick="openNav()"><i class="fa fa-bars"></i><p>menu</p></div>
-	  <a href="Login/Login.html" class="acct-icon acct-icon__desktop"> <i class="far fa-user-circle"></i> <p>Account</p></a>
-	</div>	
 
+      <header class="header">
+	
+	<div class="header__container">
+	  <img class="header__brand-logo" src="Images/brand_logo.png" alt="logo">
+	  <div class="header__bars">
+	    <i class="fa fa-bars"></i>
+	    <p>menu</p>
+	  </div>
+	  
+	  <a class="header__acct header__acct--desktop" href="Login/Login.html">
+	    <i class="far fa-user-circle"></i>
+	    <p>Account</p>
+	  </a>	  
+	</div>
+	
 	<div class="nav-menu">
 	  <ul class="nav-menu__links">
-	    <a href="Login/Login.html" class="acct-icon acct-icon__mobile"> <i class="far fa-user-circle"></i><p>account</p></a>
+	    <a class="header__acct header__acct--mobile" href="Login/Login.html"> <i class="far fa-user-circle"></i>
+	      <p>account</p>
+	    </a>
 	    <li><a href="Home.html">HOME</a></li>
 	    <li><a href="Deal.html">DEAL</a></li>
 	  </ul>	  
 	</div>
+
+
 	
       </header>
 
-      <main>
+      <main class="main">
 	
-	<div class="welcome-message">
+	<div class="main__welcome-message">
 	  WELCOME!
 	</div>
 	
       </main>
       
-      <footer>
+      <footer class="footer">
 
-	<div class="top-footer-content">
-	  
-	  <div class="footer-link-group">
-	    <div class="footer-link-group--toggle" onclick="toggleIcon(this, '.fa', 'fa-plus', 'fa-minus'); displayLinks('.footer-link-group__list', 0)">
+	<div class="footer__top-content">
+
+	  <div class="footer__links">
+	    <div class="footer__links-title events" onclick="toggleFooterIcon(this); displayLinks('.footer__links-list', 0)">
 	      <p>Link<i class="fa fa-plus"> </i> </p>
 	    </div>
-	    <ul class="footer-link-group__list">
+	    <ul class="footer__links-list">
 	      <li><a href="#D">link</a></li>
 	      <li><a href="#D">link</a></li>	      
 	    </ul>	  
 	  </div>
-
-	  <div class="footer-link-group">
-	    <div class="footer-link-group--toggle" onclick="toggleIcon(this, '.fa', 'fa-plus', 'fa-minus'); displayLinks('.footer-link-group__list', 1)">
+	  
+	  <div class="footer__links">
+	    <div class="footer__links-title events" onclick="toggleFooterIcon(this); displayLinks('.footer__links-list', 1)">
 	      <p>Link<i class="fa fa-plus"> </i> </p>
 	    </div>
-	    <ul class="footer-link-group__list">
+	    <ul class="footer__links-list">
 	      <li><a href="#D">link</a></li>
 	      <li><a href="#D">link</a></li>	      
 	    </ul>	  
@@ -65,8 +77,8 @@
 
 	</div>	
 	
-	<div class="copyright">	
-	  <img class="brand-logo" src="Images/brand_logo.png" alt="logo">
+	<div class="footer__copyright">	
+	  <img class="footer__brand-logo" src="Images/brand_logo.png" alt="logo">
 	  <p>This a project for school</p>
 	  <p><b>Copyright &#169; Matthew Roman.</b></p>
 	</div>
