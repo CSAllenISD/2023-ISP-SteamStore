@@ -7,11 +7,11 @@
     <meta name="description" content="STEAM Store">
     <link rel="stylesheet" href="Format.css">
     <script src="https://kit.fontawesome.com/d71334a9f5.js" crossorigin="anonymous"></script>
-    <script src="Main.js"></script>
+
     
   </head>
   <body>
-
+    <script src="Main.js"></script>
     <div class="grid-container">     
 
       <header class="header">
@@ -23,15 +23,16 @@
 	    <p>menu</p>
 	  </div>
 	  
-	  <a class="header__acct header__acct--desktop" href="Login/Login.html">
+	  <a class="header__acct desktop" href="Login/Login.html">
 	    <i class="far fa-user-circle"></i>
 	    <p>Account</p>
 	  </a>	  
 	</div>
 	
-	<div class="nav-menu">
-	  <ul class="nav-menu__links">
-	    <a class="header__acct header__acct--mobile" href="Login/Login.html"> <i class="far fa-user-circle"></i>
+	<div class="header__nav">
+	  <ul class="header__nav-links">
+	    <a class="header__acct mobile" href="Login/Login.html">
+	      <i class="far fa-user-circle"></i>
 	      <p>account</p>
 	    </a>
 	    <li><a href="Home.html">HOME</a></li>
@@ -56,7 +57,7 @@
 	<div class="footer__top-content">
 
 	  <div class="footer__links">
-	    <div class="footer__links-title events" onclick="toggleFooterIcon(this); displayLinks('.footer__links-list', 0)">
+	    <div class="footer__links-title events">
 	      <p>Link<i class="fa fa-plus"> </i> </p>
 	    </div>
 	    <ul class="footer__links-list">
@@ -66,7 +67,7 @@
 	  </div>
 	  
 	  <div class="footer__links">
-	    <div class="footer__links-title events" onclick="toggleFooterIcon(this); displayLinks('.footer__links-list', 1)">
+	    <div class="footer__links-title events">
 	      <p>Link<i class="fa fa-plus"> </i> </p>
 	    </div>
 	    <ul class="footer__links-list">
