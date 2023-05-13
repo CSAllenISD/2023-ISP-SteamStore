@@ -22,21 +22,28 @@
 	    <i class="fa fa-bars"></i>
 	    <p>menu</p>
 	  </div>
-	  
+
 	  <a class="header__acct desktop" href="Login/Login.html">
 	    <i class="far fa-user-circle"></i>
 	    <p>Account</p>
-	  </a>	  
+	  </a>
 	</div>
 	
 	<div class="header__nav">
 	  <ul class="header__nav-links">
-	    <a class="header__acct mobile" href="Login/Login.html">
-	      <i class="far fa-user-circle"></i>
-	      <p>account</p>
-	    </a>
-	    <li><a href="Home.html">HOME</a></li>
-	    <li><a href="Deal.html">DEAL</a></li>
+	    <div class="header__nav-links--close">
+	      <i class="far fa-x"></i>
+	      <p>close</p>
+	    </div>
+
+	    <div class="header__acct mobile">
+	      <a href="Login/Login.html">	      
+		<i class="far fa-user-circle"></i>
+		<p>account</p>
+	      </a>
+	    </div>
+	    
+	    <li><a href="Home.html">HOME</a></li>	   
 	  </ul>	  
 	</div>
 
@@ -44,10 +51,49 @@
 	
       </header>
 
-      <main class="main">
+      <main class="content">
 	
-	<div class="main__welcome-message">
-	  WELCOME!
+	<div class="featured">
+	  <div class="featured__text-fields">
+	    <h2 class="featured__title">Featured Item Title</h2>
+	    <p class="featured__description">desription</p>
+	    <a class="learn-more-link" href="">Learn more<i class="fa fa-arrow-right"></i></a>
+	  </div>
+	  <div class="featured__image-title">
+	    <img class="featured__image" src="Images/no-img.jpg">
+	  </div>
+	</div>
+
+	<h2 class="new__title">New items!</h2>
+	<div class="new">
+	  <div class="new__box">
+	    <div class="new__box-wrapper">
+	      <img class="new__box-image" src="Images/no-img.jpg">
+	      <a class="learn-more-link" href="">Learn more<i class="fa fa-arrow-right"></i></a>
+	      <p class="new__box-description">
+		Images
+	      </p>
+	    </div>
+	  </div>
+	  <div class="new__box">
+	    <div class="new__box-wrapper">
+	      <img class="new__box-image" src="Images/no-img.jpg">
+	      <a class="learn-more-link" href="Learn More/Learn-More.html">Learn more<i class="fa fa-arrow-right"></i></a>
+	      <p class="new__box-description">
+		Image
+	      </p>
+	    </div>
+	  </div>
+
+	  <div class="new__box">
+	    <div class="new__box-wrapper">
+	      <img class="new__box-image" src="Images/no-img.jpg">
+	      <a class="learn-more-link" href="">Learn more<i class="fa fa-arrow-right"></i></a>
+	      <p class="new__box-description">
+		Image
+	      </p>
+	    </div>
+	  </div>
 	</div>
 	
       </main>
@@ -73,6 +119,16 @@
 	    <ul class="footer__links-list">
 	      <li><a href="#D">link</a></li>
 	      <li><a href="#D">link</a></li>	      
+	    </ul>	  
+	  </div>
+
+	  <div class="footer__links footer__links-extra-info">
+	    <div class="footer__links-title events">
+	      <p>Extra Information<i class="fa fa-plus"> </i> </p>
+	    </div>
+	    <ul class="footer__links-list">
+	      <p>What ever</p>
+	      <img src="Images/no-img.jpg">
 	    </ul>	  
 	  </div>
 

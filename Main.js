@@ -1,12 +1,17 @@
 //these first two functions are used in the navigation, but might be used for other elements later
 function openNav() {
     const barsContainer = document.querySelector('.header__bars');
+    const exitContainer = document.querySelector('.header__nav-links--close');
     const nav = document.querySelector('.header__nav');
+    
     barsContainer.addEventListener('click', () => {
 	if (nav.style.width != '100%') {
 	    nav.style.width = '100%';
-	} else {
-	    nav.style.width = '0';
+	}				   
+    });
+    exitContainer.addEventListener('click', () => {
+	if (nav.style.width != '0%') {
+	    nav.style.width = '0%';
 	}
     });
 }
@@ -38,5 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	    transformIcon(icon, 'fa-plus', 'fa-minus');
 	});
     });
-    //<div class="footer__links-title events" onclick="toggleFooterIcon(this); displayLinks('.footer__links-list', 1)
+    // Add JavaScript code below the HTML and CSS code
+
+    // Get all the box elements
+    var boxes = document.getElementsByClassName('new__box');
+
+    // Set initial index and show the first box
+    var currentIndex = 0;
+    boxes[currentIndex].classList.add('active');
+
+    // Function to hide all boxes
+    function hideBoxes() {
+	for (var i = 0; i < boxes.length; i++) {
+	    boxes[i].classList.remove('active');
+	}
+    }
+
+    // Function to show the next box
+    function showNextBox() {
+	hideBoxes();
+	currentIndex = (currentIndex + 1) % boxes.length;
+	boxes[currentIndex].classList.add('active');
+    }
+
+    // Auto cycle to the next box every 3 seconds
+    setInterval(showNextBox, 3000);
 });
